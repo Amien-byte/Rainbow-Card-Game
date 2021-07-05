@@ -1,0 +1,32 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.login{
+	display: flex;
+	justify-content: center;
+}
+
+.container{
+	margin-top: 50px;
+	display: flex;
+	height: 40vh;
+	width: 40vw;
+	flex-direction: column;
+	border: 2px solid black;
+	border-radius: 25px;
+	-webkit-box-shadow: -1px 12px 50px -4px rgba(0,0,0,0.46); 
+	box-shadow: -1px 12px 50px -4px rgba(0,0,0,0.46);
+	align-items: center;
+	padding: 25px;
+}
+.container table{
+	margin-top: 20px;
+	width: 70%;
+}
+.container .btn_submit{
+	margin-top: 40px;
+	width: 40%;
+	margin-left: 30%;
+}
