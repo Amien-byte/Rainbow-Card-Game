@@ -1,0 +1,76 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.navbar{
+	width: 100vw;
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	background-color: #161e4a;
+	align-items: center;
+	justify-content: space-between;
+	color: white;
+}
+.app_name{
+	color: white;
+}
+.app_name a{
+	text-decoration: none;
+	color: white;
+}
+.profile_menu{
+	position: relative;
+	height: 100%;
+	display: inline-block;
+	cursor: pointer;
+}
+.flex_wrap{
+	display: flex;
+	height: 100%;
+	flex-direction: row;
+	align-items: center;
+}
+.profile_menu img{
+	width: 6vh;
+	height: 6vh;
+	border-radius: 50%;
+	margin: 6px;
+}
+.dropdown_arrow{
+	width: 2vh;
+	height: 2vh;
+	background-color: white;
+	clip-path: polygon(0 0, 0% 100%, 100% 50%);
+	margin: 7px 5px 5px 5px;
+}
+.dropdown_menu{
+	display: none;
+	position: absolute;
+	width: 90%;
+	background-color: #f9f9f9;
+	color: black;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 8px 5px;
+	z-index: 1;
+}
+.dropdown_menu ul{
+	list-style: none;
+}
+.dropdown_menu ul li a{
+	text-decoration: none;
+}
+.dropdown_menu ul li a:link {
+  color: black;
+}
+.dropdown_menu ul li a:visited {
+  color: black;
+}
+.dropdown_menu ul li:hover a {
+  color: orange;
+}
+li:hover{
+	background-color: #202645;
+}

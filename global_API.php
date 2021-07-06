@@ -20,4 +20,14 @@
 		}
 	}
 	
+	if(isset($_GET['checkroom'])){
+		$game_id = $_GET['gameid'];
+		
+		$sql = "select * from game_data where id=?";
+		$stmt = $conn->prepare($sql);
+		$stmt->execute([$name,$password]);
+		
+		$result = $stmt->fetch();
+	}
+	
 ?>
