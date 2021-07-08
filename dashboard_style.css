@@ -3,6 +3,13 @@
 	padding:0;
 	box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #202645; 
+  border-radius: 20px;
+}
 .container{
 	width: 100vw;
 	height: 90vh;
@@ -21,6 +28,7 @@
 }
 .profile_info{
 	grid-column: 1 / 3;
+	overflow: auto;
 }
 .users_status{
 	grid-column-start: 3;
@@ -54,4 +62,49 @@
 }
 .btn_check_room:active{
 	background-color: #202645;
+}
+.header{
+	display: flex;
+	align-items: center;
+	margin: 10px;
+}
+.header h1{
+	margin-left: 40px;
+}
+.level_wrapper{
+	position: relative;
+}
+.level_wrapper h4{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+}
+.level_content{
+	position: relative;
+	background: orange;
+	border: 0.25rem solid orange;
+	height: 8rem;
+	width: 8rem;
+	outline: 0;
+	overflow: hidden;
+	border-radius: 100%;
+}
+.level_filler{
+	content: "";
+	position: absolute;
+	height: 200%;
+	width: 200%;
+	bottom: -50%;
+	left: -50%;
+	background: #353e6f;
+	border-radius: 40%;
+	animation: spin 10s ease-in-out infinite;
+}
+@keyframes spin{
+	0%{transform: translateY(0) rotate(0deg)}
+	100%{transform: translateY(-100%) rotate(600deg)}
 }

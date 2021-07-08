@@ -26,8 +26,10 @@
 		curl_close($curl);
 		
 		if($result['status'] == "success"){
-			$_SESSION['user_id'] = $result['id'];
-			$_SESSION['name'] = $result['name'];
+			$_SESSION['user_id'] = $result['user_id'];
+			$_SESSION['username'] = $result['username'];
+			$_SESSION['level'] = $result['level'];
+			$_SESSION['xp'] = $result['xp'];
 			$_SESSION['poin'] = $result['poin'];
 			$_SESSION['bid_poin'] = $result['bid_poin'];
 			$_SESSION['reward_poin'] = $result['reward_poin'];

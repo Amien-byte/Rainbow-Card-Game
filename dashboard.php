@@ -7,7 +7,9 @@
 	}
 	
 	$user_id = $_SESSION['user_id'];
-	$name = $_SESSION['name'];
+	$username = $_SESSION['username'];
+	$level = $_SESSION['level'];
+	$xp = $_SESSION['xp'];
 	$poin = $_SESSION['poin'];
 	$bid_poin = $_SESSION['bid_poin'];
 	$reward_poin = $_SESSION['reward_poin'];
@@ -44,7 +46,15 @@
 <body>
 	<div class="container">
 		<div class="bar profile_info">
-			<h1><?php echo ucfirst($name) ?></h1>
+			<div class="header">
+				<div class="level_wrapper">
+					<h4><?php echo 'Lv.'.$level.' xp:'.$xp ?></h4>
+					<div class="level_content">
+						<div class="level_filler"></div>
+					</div>				
+				</div>
+				<h1><?php echo ucfirst($username) ?></h1>
+			</div>
 			<ul>
 				<li>Poin: <?php echo $poin ?></li>
 				<li>Bid Poin: <?php echo $bid_poin ?></li>
