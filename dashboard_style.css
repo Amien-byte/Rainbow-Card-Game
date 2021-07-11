@@ -98,13 +98,11 @@
 	position: absolute;
 	height: 200%;
 	width: 200%;
-	bottom: -50%;
+	bottom: 0;
 	left: -50%;
 	background: #353e6f;
 	border-radius: 40%;
-	animation: spin 10s ease-in-out infinite;
+	transition: transform 7s;
+	transform: translateY(0) rotate(0deg);
 }
-@keyframes spin{
-	0%{transform: translateY(0) rotate(0deg)}
-	100%{transform: translateY(-100%) rotate(600deg)}
-}
+

@@ -12,7 +12,6 @@
 	$xp = $_SESSION['xp'];
 	$poin = $_SESSION['poin'];
 	$bid_poin = $_SESSION['bid_poin'];
-	$reward_poin = $_SESSION['reward_poin'];
 	
 	if(array_key_exists('game_id', $_GET)) {
 		check_room($_GET['game_id']);
@@ -58,7 +57,6 @@
 			<ul>
 				<li>Poin: <?php echo $poin ?></li>
 				<li>Bid Poin: <?php echo $bid_poin ?></li>
-				<li>Reward Poin: <?php echo $reward_poin ?></li>
 			</ul>
 		</div>
 		<div class="bar users_status"></div>
@@ -69,5 +67,13 @@
 			</form>
 		</div>
 	</div>
+	<script>
+		const fill = document.querySelector('.level_filler')
+		
+		window.addEventListener('load', function () {
+			var growth = <?php echo ($xp/(2*pow(3,$level+1)))/2 ?>;
+			fill.style.transform = "translateY(-"+ growth.toFixed(2)*100 +"%) rotate(360deg)"
+		});
+	</script>
 </body>
 </html>

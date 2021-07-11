@@ -8,7 +8,7 @@
 	<div class="profile_menu">
 		<div class="flex_wrap">
 			<img src="uploads/img/default.jpg" alt="">
-			<text>testing nama yang sangat panjang</text>
+			<text><?php echo ucfirst($username) ?></text>
 			<div class="dropdown_arrow"></div>
 		</div>
 		<div class="dropdown_menu">

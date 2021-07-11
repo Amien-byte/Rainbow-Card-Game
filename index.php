@@ -32,7 +32,6 @@
 			$_SESSION['xp'] = $result['xp'];
 			$_SESSION['poin'] = $result['poin'];
 			$_SESSION['bid_poin'] = $result['bid_poin'];
-			$_SESSION['reward_poin'] = $result['reward_poin'];
 			header('Location: /Rainbow%20Card%20Game/dashboard.php');
 		}else if($result['status'] == "no result"){
 			echo "password atau name salah!";
