@@ -2,6 +2,7 @@
 
 	include_once "db_config.php";
 	
+	// autentikasi login
 	if(isset($_GET['login'])){
 		$username = $_GET['name'];
 		$password = $_GET['password'];
@@ -19,16 +20,6 @@
 			$result['status'] = "no result";
 			echo json_encode($result);
 		}
-	}
-	
-	if(isset($_GET['checkroom'])){
-		$game_id = $_GET['gameid'];
-		
-		$sql = "select * from game_data where id=?";
-		$stmt = $conn->prepare($sql);
-		$stmt->execute([$name,$password]);
-		
-		$result = $stmt->fetch();
 	}
 	
 ?>

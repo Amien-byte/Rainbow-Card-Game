@@ -1,0 +1,41 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+	width: 100vw;
+}
+.view_bar{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: repeat(2,1fr);
+	background: yellow;
+	height: 75vh;
+}
+.action_bar{
+	background: green;
+	height: 25vh;
+}
+.player1{
+	background: blue
+}
+.player2{
+	background: red
+}
+.player3{
+	background: lime
+}
+.bandar{
+	grid-column: 2/3;
+	grid-row: 2/3;
+	background: pink
+}
+.top{
+	
+}
+.left{}
+.right{}
