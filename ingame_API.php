@@ -44,11 +44,16 @@
 	
 	// fetch data room berdasarkan id
 	if(isset($_GET['getroombyid'])){
-		$room_id = $_GET['room_id'];
+		$room_id = $_GET['getroombyid'];
+		$username = $_GET['username'];
 		
 		$result = getRoomById($room_id);
 		
 		if($result>0){
+			$cards = explode('-',$result['cards']);
+			$playing = explode(',',$result['playing']);
+			$key = array_search($username, $playing);
+			$result['cards'] = $cards[$key];
 			$result['status'] = "success";
 			echo json_encode($result);
 		}else{

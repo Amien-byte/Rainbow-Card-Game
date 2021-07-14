@@ -15,27 +15,64 @@
 	grid-template-rows: repeat(2,1fr);
 	background: yellow;
 	height: 75vh;
+	overflow: hidden;
 }
 .action_bar{
+	display: flex;
 	background: green;
 	height: 25vh;
 }
-.player1{
-	background: blue
-}
-.player2{
-	background: red
-}
-.player3{
-	background: lime
-}
 .bandar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	grid-column: 2/3;
 	grid-row: 2/3;
 	background: pink
 }
 .top{
-	
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	background: blue;
+	grid-column: 2/3;
 }
-.left{}
-.right{}
+.left{
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: red;
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+.right{
+	visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background: lime;
+	grid-column: 3/4;
+	grid-row: 2/3;
+}
+.left .hand_card{
+	transform: rotate(90deg);
+	align-self: flex-start;
+	margin-left: -15%;
+}
+.right .hand_card{
+	transform: rotate(270deg);
+	margin-right: -15%;
+}
+.hand_card img{
+	margin: -15px;
+}
+.bandar img{
+	margin: 2px;
+}
+.status{
+	display: flex;
+	background: #202645;
+	color: white;
+	text-shadow: 0px 0px 20px white;
+}
